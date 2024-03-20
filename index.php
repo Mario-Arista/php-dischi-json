@@ -19,6 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 </head>
 <body>
 
@@ -29,31 +34,39 @@
             <!-- HEADER -->
             <header>
 
-            <div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="logo">
-            </div>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="logo">
+                </div>
 
             </header>
 
             <!-- CONTENITORE NASCOSTO DA MOSTRARE AL CLICK -->
             <div 
-                class="hidden"
-                v-for="disk in disks"
+                class="hidden-infos"
+                v-if="showDetails"
             >
-                <img :src="disk.poster" :alt="disk.title">
-                <div>
-                    {{disk.title}}
-                </div>
-                <div>
-                    {{disk.author}}
-                </div>
-                <div>
-                    {{disk.genre}}
-                </div>
-                <div>
-                    {{disk.Pop}}
-                </div>
+                <i class="fa fa-arrow-circle-left"
+                    @click="hideDiskDetails()"
+                
+                >
 
+                </i>
+                <div>
+                    <img :src="selecteDisk.poster" :alt="selecteDisk.title">
+                    <div>
+                        {{selecteDisk.title}}
+                    </div>
+                    <div>
+                        {{selecteDisk.author}}
+                    </div>
+                    <div>
+                        {{selecteDisk.genre}}
+                    </div>
+                    <div>
+                        {{selecteDisk.Pop}}
+                    </div>
+
+                </div>
             </div>
 
             <!-- CONTENITORE VISIBILE -->
@@ -61,7 +74,8 @@
                 
                 <div 
                     class="disk-show"
-                    v-for="disk in disks"
+                    v-for="(disk, discIndex) in disks"
+                    @click="showDiskDetails(discIndex)"
                 >   
                     <div class="img-container">
                         <img :src="disk.poster" :alt="disk.title">

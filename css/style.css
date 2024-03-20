@@ -10,7 +10,7 @@
 
 body {
     font-family: "Barlow Condensed", sans-serif;
-    background-color: #1D2D3C;
+    background: linear-gradient(#140D0B, #35BC54);
 }
 
 /* Header */
@@ -52,7 +52,7 @@ header img {
     justify-content: flex-start;
     align-items: center;
     width: calc(100% / 3 - 90px / 3 * 2);
-    background-color: #101F31;
+    background-color: #140D0B;
 
     padding-top: 40px;
     padding-bottom: 35px;
@@ -72,16 +72,16 @@ header img {
 }
 
 .title-disk {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
-    color: white;
+    color: #35BC54;
 
     padding-bottom: 20px;
 
 }
 
 .author-disk {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: white;
 
     padding-bottom: 20px;
@@ -96,6 +96,28 @@ header img {
 
 /* Hidden disk elements */
 
-.hidden {
-    display: none;
+.hidden-infos {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+
+    background-color: #140d0b3d;
+
+}
+
+.hidden-infos i {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    font-size: 50px;
+
+    color: #35BC54;
 }
