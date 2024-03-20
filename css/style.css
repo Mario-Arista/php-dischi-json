@@ -1,3 +1,101 @@
-h1 {
-    color: red;
+/* Reset rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+    background-color: #1D2D3C;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: #140D0B;
+}
+
+header div {
+    padding-left: 150px;
+}
+
+header img {
+    width: 65px;
+}
+
+/* Visible disk */
+
+.disks {
+    display: flex;
+
+    gap: 90px 90px;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 40px 5px;
+    
+}
+
+.disk-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% / 3 - 90px / 3 * 2);
+    background-color: #101F31;
+
+    padding-top: 40px;
+    padding-bottom: 35px;
+
+    border-radius: 8px;
+}
+
+.disk-show .img-container {
+    width: 80%;
+    padding-bottom: 35px;
+
+}
+
+.disk-show .img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.title-disk {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+
+    padding-bottom: 20px;
+
+}
+
+.author-disk {
+    font-size: 0.8em;
+    color: white;
+
+    padding-bottom: 20px;
+
+}
+
+.year-disk {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Hidden disk elements */
+
+.hidden {
+    display: none;
 }
