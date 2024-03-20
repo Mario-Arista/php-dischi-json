@@ -71,7 +71,7 @@ header img {
     height: auto;
 }
 
-.title-disk {
+.disk-show .title-disk {
     font-size: 1.3em;
     font-weight: bold;
     color: #35BC54;
@@ -80,7 +80,7 @@ header img {
 
 }
 
-.author-disk {
+.disk-show .author-disk {
     font-size: 0.9em;
     color: white;
 
@@ -88,7 +88,7 @@ header img {
 
 }
 
-.year-disk {
+.disk-show .year-disk {
     font-size: 1.1em;
     font-weight: bold;
     color: white;
@@ -97,7 +97,10 @@ header img {
 /* Hidden disk elements */
 
 .hidden-infos {
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     width: 100vw;
     height: 100vh;
@@ -108,7 +111,7 @@ header img {
 
     z-index: 2;
 
-    background-color: #140d0b3d;
+    background: linear-gradient(#140d0ba9, #35bc54b4);
 
 }
 
@@ -121,3 +124,49 @@ header img {
 
     color: #35BC54;
 }
+
+.hidden-infos img {
+    width: 300px;
+}
+
+.hidden-infos .title-disk {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 5px;
+
+}
+
+.hidden-infos .author-disk {
+    text-align: center;
+
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 5px;
+
+
+}
+
+.hidden-infos .year-disk {
+    text-align: center;
+
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 5px;
+
+}
+
+.hidden-infos .genre-disk {
+    text-align: center;
+
+    font-size: 1.1em;
+    font-weight: bold;
+    color:black;
+    padding-bottom: 5px;
+
+}
+
+

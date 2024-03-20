@@ -29,6 +29,37 @@
 
     <div id="app">
 
+        <!-- CONTENITORE NASCOSTO DA MOSTRARE AL CLICK -->
+        <div 
+            class="hidden-infos"
+            v-if="showDetails"
+        >
+            <i class="fa fa-arrow-circle-left"
+                @click="hideDiskDetails()"
+            
+            >
+
+            </i>
+            <div>
+
+                <img :src="selecteDisk.poster" :alt="selecteDisk.title">
+
+                <div class="title-disk">
+                    {{selecteDisk.title}}
+                </div>
+                <div class="author-disk">
+                    {{selecteDisk.author}}
+                </div>
+                <div class="genre-disk">
+                    {{selecteDisk.genre}}
+                </div>
+                <div class="year-disk">
+                    {{selecteDisk.year}}
+                </div>
+
+            </div>
+        </div>
+
         <div class="container py-5">
 
             <!-- HEADER -->
@@ -39,35 +70,6 @@
                 </div>
 
             </header>
-
-            <!-- CONTENITORE NASCOSTO DA MOSTRARE AL CLICK -->
-            <div 
-                class="hidden-infos"
-                v-if="showDetails"
-            >
-                <i class="fa fa-arrow-circle-left"
-                    @click="hideDiskDetails()"
-                
-                >
-
-                </i>
-                <div>
-                    <img :src="selecteDisk.poster" :alt="selecteDisk.title">
-                    <div>
-                        {{selecteDisk.title}}
-                    </div>
-                    <div>
-                        {{selecteDisk.author}}
-                    </div>
-                    <div>
-                        {{selecteDisk.genre}}
-                    </div>
-                    <div>
-                        {{selecteDisk.Pop}}
-                    </div>
-
-                </div>
-            </div>
 
             <!-- CONTENITORE VISIBILE -->
             <div class="disks">
