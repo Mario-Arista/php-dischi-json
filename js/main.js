@@ -27,6 +27,7 @@ createApp({
 
     methods: {
 
+        // Funzione per mostrare elemento nascosto con chiamata API
         showDiskDetails(discIndex) {
 
             axios.get('./server.php').then(res => {
@@ -41,6 +42,7 @@ createApp({
 
         },
 
+        // Funzione per mostrare nascondere elemento al click sulla freccia
         hideDiskDetails() {
 
             this.showDetails =  false;

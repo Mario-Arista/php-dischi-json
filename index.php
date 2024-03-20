@@ -58,18 +58,19 @@
                 </div>
 
             </div>
+            
         </div>
 
-        <div class="container py-5">
+        <!-- HEADER -->
+        <header>
 
-            <!-- HEADER -->
-            <header>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="logo">
+            </div>
 
-                <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png" alt="logo">
-                </div>
+        </header>
 
-            </header>
+        <main>
 
             <!-- CONTENITORE VISIBILE -->
             <div class="disks">
@@ -99,7 +100,8 @@
             </div>
 
             
-        </div>
+        </main>
+
     </div>
 
     <script src="./js/main.js"></script>
