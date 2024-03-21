@@ -58,6 +58,9 @@ header img {
     padding-bottom: 35px;
 
     border-radius: 8px;
+
+    cursor: pointer;
+
 }
 
 .disk-show .img-container {
@@ -109,19 +112,22 @@ header img {
     font-size: 50px;
 
     color: #35BC54;
+
+    cursor: pointer;
 }
+
 .hidden-infos .disk-info {
 
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 
-    background: linear-gradient(#140D0B, #35BC54);
+    background: linear-gradient(#35BC54, white);
 
 }
 
 .hidden-infos img {
-    width: 300px;
+    max-width: 400px;
 }
 
 .hidden-infos .title-disk {
