@@ -1,10 +1,13 @@
 <?php
 
 // Includo il file JSON e decodifico il contenuto
-$albums = json_decode(file_get_contents("../php-dischi-json/disks.json"));
+$albums = json_decode(file_get_contents("./disks.json"));
 
 // dichiaro che è un json
-header("Content_Type: application/json");
+header("Content-Type: application/json");
 
-// stampo
+// gestione 
+
+
+// stampo in pagina
 echo json_encode($albums);

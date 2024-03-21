@@ -28,15 +28,15 @@ createApp({
     methods: {
 
         // Funzione per mostrare elemento nascosto con chiamata API
-        showDiskDetails(discIndex) {
+        showDiskDetails(index) {
 
             axios.get('./server.php').then(res => {
                 
     
-                this.selecteDisk = res.data[discIndex];
+                this.selecteDisk = res.data[index];
                 this.showDetails = true;
 
-                console.log(res.data[discIndex]);
+                console.log(res.data[index]);
             });
 
 

@@ -34,13 +34,14 @@
             class="hidden-infos"
             v-if="showDetails"
         >
-            <i class="fa fa-arrow-circle-left"
+
+            <i 
+                class="fa fa-remove"
                 @click="hideDiskDetails()"
-            
-            >
+            ></i>
 
             </i>
-            <div>
+            <div class="disk-info">
 
                 <img :src="selecteDisk.poster" :alt="selecteDisk.title">
 
@@ -77,8 +78,8 @@
                 
                 <div 
                     class="disk-show"
-                    v-for="(disk, discIndex) in disks"
-                    @click="showDiskDetails(discIndex)"
+                    v-for="(disk, index) in disks"
+                    @click="showDiskDetails(index)"
                 >   
                     <div class="img-container">
                         <img :src="disk.poster" :alt="disk.title">
@@ -86,14 +87,6 @@
                     
                     <div class="title-disk">
                         {{disk.title}}
-                    </div>
-
-                    <div class="author-disk">
-                        {{disk.author}}
-                    </div>
-
-                    <div class="year-disk">
-                        {{disk.year}}
                     </div>
 
                 </div>
