@@ -7,7 +7,7 @@ createApp({
             disks: [],
 
             // array per bonus
-            selecteDisk: [],
+            selecteDisk: {},
 
             // Boleano per bonus
             showDetails: false,
@@ -27,22 +27,22 @@ createApp({
 
     methods: {
 
-        // Funzione per mostrare elemento nascosto con chiamata API
+        // Funzione per mostrare elemento nascosto + chiamata API
         showDiskDetails(index) {
 
-            axios.get('./server.php').then(res => {
+            axios.get('./server.php?discIndex=' + index).then(res => {
                 
     
-                this.selecteDisk = res.data[index];
+                this.selecteDisk = res.data;
                 this.showDetails = true;
 
-                console.log(res.data[index]);
+                console.log(res.data);
             });
 
 
         },
 
-        // Funzione per mostrare nascondere elemento al click sulla freccia
+        // Funzione per nascondere elemento al click sulla freccia
         hideDiskDetails() {
 
             this.showDetails =  false;
